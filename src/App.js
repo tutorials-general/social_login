@@ -1,9 +1,8 @@
-import React,{useEffect, useState} from 'react';
+import React,{useEffect} from 'react';
 import './App.css';
 import Config from './config'
 
 function App() {
-  const [isSignedIn , setIsSignedIn] = useState(false)
   
   useEffect(()=>{
     window.gapi.load('auth2',()=>{
