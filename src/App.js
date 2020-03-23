@@ -10,14 +10,13 @@ function App() {
       window.gapi.auth2.init({
         client_id:Config.oAuthId
       }).then(()=>{
-        window.gapi.signin2.render('my-signin', {
+        window.gapi.signin2.render('my-signin',{
           'scope': 'profile email',
               'width': 250,
               'height': 50,
               'longtitle': false,
               'theme': 'light',
               'onsuccess': onSuccess,
-              
         })
       })
     })
@@ -25,7 +24,7 @@ function App() {
   return (
     <>
     <div>hi</div>
-    <div id='my-signin' />
+    <div id='my-signin' >sign in</div>
     <div onClick={onSignOut}>sign out</div>
     </>
   );
